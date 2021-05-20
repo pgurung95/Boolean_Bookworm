@@ -1,0 +1,2 @@
+--DROP DATABASE IF EXISTS xyz_db;
+--CREATE DATABASE xyz_db;--
