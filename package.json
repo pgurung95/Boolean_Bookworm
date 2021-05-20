@@ -1,0 +1,31 @@
+{
+  "name": "boolean_bookworm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pgurung95/Boolean_Bookworm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pgurung95/Boolean_Bookworm/issues"
+  },
+  "homepage": "https://github.com/pgurung95/Boolean_Bookworm#readme",
+  "dependencies": {
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2",
+    "underscore": "^1.13.1"
+  }
+}
