@@ -16,8 +16,12 @@ blog.init(
                 type: DataTypes.STRING,
         },
         user_name: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
+            references: {
+                model: 'user',
+                key: 'name',
+            },
         },
     },
     {
