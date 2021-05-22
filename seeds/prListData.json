@@ -1,0 +1,50 @@
+[
+    {
+        "book_name": "Game of Thrones",
+        "book_author": "George R.R. Martin",
+        "book_description": "weird people competing for the throne",
+        "user_id": 1
+    },
+    {
+        "book_name": "War and Peace",
+        "book_author": "Leo Tolstoy",
+        "book_description": "A book about a bunch of rich Russians",
+        "user_id": 1
+    },
+    {
+        "book_name": "WHILE JUSTICE SLEEPS",
+        "book_author": "Stacey Abrams",
+        "book_description": "Justice falls into coma, assistant solves case",
+        "user_id": 2
+    },
+    {
+        "book_name": "SOOLEY",
+        "book_author": "John Grisham",
+        "book_description": "Guy gets scholarship, saves family from war ravaged country",
+        "user_id": 2
+    },
+    {
+        "book_name": "21ST BIRTHDAY",
+        "book_author": "James Patterson and Maxine Paetro",
+        "book_description": "Missing Mother, new evidence changes case",
+        "user_id": 3
+    },
+    {
+        "book_name": "THE HILL WE CLIMB",
+        "book_author": "Amanda Gorman",
+        "book_description": "Inaugural Day Poem",
+        "user_id": 3
+    },
+    {
+        "book_name": "Ready Player One",
+        "book_author": "Ernest Cline",
+        "book_description": "Random person searching for an Easter Egg",
+        "user_id": 4
+    },
+    {
+        "book_name": "Ready Player Two",
+        "book_author": "Ernest Cline",
+        "book_description": "A continuation of Ready Player One",
+        "user_id": 4
+    }
+]
