@@ -1,6 +1,34 @@
 [
   {
     "title": "Aesops Fables",
+    "author": "",
+    "date_read": "",
+    "description": ""
+  },
+  {
+    "title": "The Notebook",
+    "author": "",
+    "date_read": "",
+    "description": ""
+  },
+  {
+    "title": "Game of Thrones",
+    "author": "",
+    "date_read": "",
+    "description": ""
+  },
+  {
+    "title": "Lord of the Rings",
+    "author": "",
+    "date_read": "",
+    "description": ""
+  },
+  {
+    "title": "Harry Potter",
+    "author": "",
+    "date_read": "",
+    "description": ""
+
     "author": "Aesop",
     "date_read": "",
     "description":
@@ -38,29 +66,26 @@
     "title": "Eat Pray Love",
     "author": "",
     "date_read": "",
-    "description":
-      "",
+    "description": ""
   },
   {
     "title": "Fifty Shades of Grey",
     "author": "",
     "date_read": "",
-    "description":
-      "",
+    "description": ""
   },
   {
     "title": "Pride and Prejudice",
     "author": "",
     "date_read": "",
-    "description":
-      "",
+
+    "description": ""
   },
   {
     "title": "Ready player Two",
     "author": "",
     "date_read": "",
-    "description":
-      "",
-  },
+    "description": ""
+  }
 ]
 
