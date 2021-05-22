@@ -17,7 +17,7 @@ prList.init(
             allowNull: false,
         },
         book_author: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         book_description: {
@@ -25,6 +25,7 @@ prList.init(
         },
         user_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
                 model: 'user',
                 key: 'id',
