@@ -1,2 +1,2 @@
---DROP DATABASE IF EXISTS xyz_db;
---CREATE DATABASE xyz_db;--
+DROP DATABASE IF EXISTS bookwormBoolean_db;
+CREATE DATABASE bookwormBoolean_db;
