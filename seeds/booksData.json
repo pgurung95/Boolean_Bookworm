@@ -1,39 +1,9 @@
 [
   {
     "title": "Aesops Fables",
-    "author": "",
-    "date_read": "",
-    "description": ""
-  },
-  {
-    "title": "The Notebook",
-    "author": "",
-    "date_read": "",
-    "description": ""
-  },
-  {
-    "title": "Game of Thrones",
-    "author": "",
-    "date_read": "",
-    "description": ""
-  },
-  {
-    "title": "Lord of the Rings",
-    "author": "",
-    "date_read": "",
-    "description": ""
-  },
-  {
-    "title": "Harry Potter",
-    "author": "",
-    "date_read": "",
-    "description": ""
-  },
-  {
     "author": "Aesop",
     "date_read": "",
-    "description":
-    "This collection presents nearly 300 of Aesop’s most entertaining and enduring stories"
+    "description": "Aesop's Fables, or the Aesopica, is a collection of fables credited to Aesop, a slave and storyteller believed to have lived in ancient Greece between 620 and 564 BCE"
   },
   {
     "title": "The Notebook",
@@ -65,28 +35,27 @@
   },
   {
     "title": "Eat Pray Love",
-    "author": "",
+    "author": "Elizabeth Gilbert",
     "date_read": "",
-    "description": ""
+    "description": "This wise and rapturous book is the story of how the author left behind all these outward marks of success, and set out to explore three different aspects of her nature, against the backdrop of three different cultures: pleasure in Italy, devotion in India, and on the Indonesian island of Bali, a balance between worldly enjoyment and divine transcendence."
   },
   {
     "title": "Fifty Shades of Grey",
-    "author": "",
+    "author": "E L James",
     "date_read": "",
-    "description": ""
+    "description": "When literature student Anastasia Steele goes to interview young entrepreneur Christian Grey, she encounters a man who is beautiful, brilliant, and intimidating. The unworldly, innocent Ana is startled to realize she wants this man and, despite his enigmatic reserve, finds she is desperate to get close to him. Unable to resist Ana's quiet beauty, wit, and independent spirit, Grey admits he wants her, too—but on his own terms."
   },
   {
     "title": "Pride and Prejudice",
-    "author": "",
+    "author": "Jane Austen",
     "date_read": "",
-
-    "description": ""
+    "description": "A comedy of manners centered around the Bennet family, a family of five daughters where the parents are desperate for at least one of them to make a wealthy match and save the next generation from destitution."
   },
   {
-    "title": "Ready player Two",
-    "author": "",
+    "title": "Ready Player Two",
+    "author": "Ernest Cline",
     "date_read": "",
-    "description": ""
+    "description": "Days after winning OASIS founder James Halliday’s contest, Wade Watts makes a discovery that changes everything."
   }
 ]
 
