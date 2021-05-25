@@ -21,7 +21,7 @@ Books.init(
     },
     date_read: {
         type: DataTypes.DATE,
-        allowNull: false,
+        allowNull: true,
         defaultValue: DataTypes.NOW,
     },
     description: {

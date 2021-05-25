@@ -18,10 +18,10 @@ blog.init(
         user_name: {
             type: DataTypes.STRING,
             allowNull: false,
-            references: {
-                model: 'user',
-                key: 'name',
-            },
+            // references: {
+            //     model: 'user',
+            //     key: 'name',
+            // },
         },
     },
     {
@@ -29,7 +29,7 @@ blog.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'prList',
+        modelName: 'blog',
     }
 );
 
