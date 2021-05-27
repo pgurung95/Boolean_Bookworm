@@ -9,29 +9,30 @@
 // get = /login (takes user to login/sign-up page)
 
 const router = require('express').Router();
-const { Books, personalReadingList } = require('../models');
-// Import the custom middleware
-// const withAuth = require('../utils/auth');
+const { Books, personalReadingList, blog } = require('../models');
+const withAuth = require('../utils/auth');
 
 // GET all previous read books from book club for homepage
 router.get('/', async (req, res) => {
     try {
-        const booksData = await Books.findAll({
-            include: [
-                {
-                    model: Books,
-                    attributes: ['title']
-                },
-            ],
-        });
-
-        const books = booksData.map((book) =>
-            book.get({ plain: true })
-        );
+        const booksData = await Books.findAll();
 
         res.render('homepage', {
-            books,
-            loggedIn: req.session.loggedIn,
+            booksData,
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
+router.get('/', async (req, res) => {
+    try {
+        const blogData = await blog.findAll();
+
+        res.render('homepage', {
+            blogData,
+            isCurrent: false
         });
     } catch (err) {
         console.log(err);
@@ -40,34 +41,28 @@ router.get('/', async (req, res) => {
 });
 
 // GET profile
-router.get('/profile', async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
     try {
-        const prBooksData = await personalReadingList.findAll({
-            include: [
-                {
-                    model: Books,
-                    attributes: ['title'],
-                },
-            ],
-        });
-
-        const books = booksData.map((book) =>
-            book.get({ plain: true })
-        );
-
-        res.render('profile', {
-            books,
-            loggedIn: req.session.loggedIn,
-        });
+      // Find the logged in user based on the session ID
+      const userData = await User.findByPk(req.session.user_id, {
+        attributes: { exclude: ['password'] },
+        include: [{ model: personalReadingList }],
+      });
+  
+      const user = userData.get({ plain: true });
+  
+      res.render('profile', {
+        ...user,
+        logged_in: true
+      });
     } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
+      res.status(500).json(err);
     }
-});
+  });
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
-        res.redirect('/');
+        res.redirect('/profile');
         return;
     }
 
