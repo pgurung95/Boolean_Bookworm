@@ -4,13 +4,13 @@
     Not applicable
     {{/if}}</h2>
 </aside>
-{{#if loggedIn}}
+{{#if logged_in}}
 <div class="bookclub_blog">
   Blog Post:
   <ul class="comment">
-    {{#each blogData}}
-    <li>{{blogData.user_name}}</li>
-    <li>{{blogData.comment}}</li>
+    {{#each posts as |post|}}
+    <li>{{post.user_name}}</li>
+    <li>{{post.comment}}</li>
     {{/each}}
   </ul>
 </div>
@@ -18,8 +18,8 @@
 <div class="bookclub_list">
   Previous Book Club Reads:
   <ul class="book_list">
-    {{#each booksData}}
-    <li>{{booksData.title}}</li>
+    {{#each books as |book|}}
+    <li>{{book.title}}</li>
     {{/each}}
   </ul>
 </div>

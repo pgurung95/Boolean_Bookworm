@@ -1,12 +1,3 @@
-// ? - need to get books data - do we add here?
-
-// get = / (home page - user is not logged in)
-
-// get = /profile  (takes user to their profile immediately after logging in)
-
-// get = /booleanbookworm (takes user to logged-in "homepage" that displays blog - from link in the users profile)
-
-// get = /login (takes user to login/sign-up page)
 
 const router = require('express').Router();
 const { Books, personalReadingList, blog } = require('../models');
@@ -16,29 +7,25 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
     try {
         const booksData = await Books.findAll();
-
-        res.render('homepage', {
-            booksData,
-        });
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
-
-router.get('/', async (req, res) => {
-    try {
+        // const currentBook = await Books.findOne({
+        //     where
+        // })
+                    // isCurrent: false
         const blogData = await blog.findAll();
 
+        const posts = blogData.map((post) => post.get({ plain: true }));
+        const books = booksData.map((book) => book.get({ plain: true }));
+
         res.render('homepage', {
-            blogData,
-            isCurrent: false
+            books, posts,
+            logged_in: req.session.logged_in 
         });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
 });
+
 
 // GET profile
 router.get('/profile', withAuth, async (req, res) => {
@@ -62,7 +49,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
-        res.redirect('/profile');
+        res.redirect('/homepage');
         return;
     }
 
