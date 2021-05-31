@@ -36,10 +36,13 @@ router.get('/profile', withAuth, async (req, res) => {
         include: [{ model: personalReadingList }],
       });
   
+      const prListBooks = await personalReadingList.findAll();
+
       const user = userData.get({ plain: true });
+      const books = prListBooks.map((book) => book.get({ plain: true }));
   
       res.render('profile', {
-        ...user,
+        ...user, books,
         logged_in: true
       });
     } catch (err) {

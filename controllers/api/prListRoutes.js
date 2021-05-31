@@ -4,20 +4,13 @@
 // router.delete to delete book from reading list
 
 const router = require('express').Router();
-const { personalReadingList, Books} = require('../../models');
+const { personalReadingList} = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // GET all personalReadingList for profile
 router.get('/', async (req, res) => {
     try {
-      const dbprListData = await personalReadingList.findAll({
-        include: [
-          {
-            model: Books,
-            attributes: ['title', 'author', 'description'],
-          },
-        ],
-      });
+      const dbprListData = await personalReadingList.findAll();
   
       const personalReadingLists = dbprListData.map((PersonalReadingList) =>
         PersonalReadingList.get({ plain: true })
@@ -35,54 +28,43 @@ router.get('/', async (req, res) => {
   
   // GET one personalReadingList
   // Use the custom middleware before allowing the user to access the personalReadingList
-  router.get('/PersonalReadingList/:id', withAuth, async (req, res) => {
-    try {
-      const dbprListData = await personalReadingList.findByPk(req.params.id, {
-        include: [
-          {
-            model: Books,
-            attributes: [
-              'title',
-              'author',
-              'description',
-            ],
-          },
-        ],
-      });
+  // router.get('/', withAuth, async (req, res) => {
+  //   try {
+  //     const dbprListData = await personalReadingList.findByPk(req.params.id);
   
-      const PersonalReadingList = dbprListData.get({ plain: true });
-      res.render('PersonalReadingList', { PersonalReadingList, loggedIn: req.session.loggedIn });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-  });
+  //     const PersonalReadingList = dbprListData.get({ plain: true });
+  //     res.render('PersonalReadingList', { PersonalReadingList, loggedIn: req.session.loggedIn });
+  //   } catch (err) {
+  //     console.log(err);
+  //     res.status(500).json(err);
+  //   }
+  // });
   
   // GET one Books
   // Use the custom middleware before allowing the user to access the Books
-  router.get('/books/:id', withAuth, async (req, res) => {
-    try {
-      const dbBooksData = await Books.findByPk(req.params.id);
+  // router.get('/books/:id', withAuth, async (req, res) => {
+  //   try {
+  //     const dbBooksData = await Books.findByPk(req.params.id);
   
-      const books = dbBooksData.get({ plain: true });
+  //     const books = dbBooksData.get({ plain: true });
   
-      res.render('books', { books, loggedIn: req.session.loggedIn });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-  });
+  //     res.render('books', { books, loggedIn: req.session.loggedIn });
+  //   } catch (err) {
+  //     console.log(err);
+  //     res.status(500).json(err);
+  //   }
+  // });
   
-  router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-      res.redirect('/');
-      return;
-    }
+  // router.get('/login', (req, res) => {
+  //   if (req.session.loggedIn) {
+  //     res.redirect('/');
+  //     return;
+  //   }
   
-    res.render('login');
-  });
+  //   res.render('login');
+  // });
 
-router.put('/', withAuth, async (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
       const newpersonalReadingList = await personalReadingList.update({
         ...req.body,
@@ -95,7 +77,7 @@ router.put('/', withAuth, async (req, res) => {
     }
   });
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newpersonalReadingList = await personalReadingList.create({
       ...req.body,
@@ -108,7 +90,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const personalReadingList = await personalReadingList.destroy({
       where: {
