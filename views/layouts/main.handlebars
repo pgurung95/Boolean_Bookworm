@@ -10,9 +10,9 @@
 </head>
 
 <body>
-  <header>
-    <h1>Boolean Bookworm Homepage</h1>
-  </header>
+<div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>Boolean Bookworm Homepage</h1>
   <nav>
     {{#if logged_in}}
     <a href="/profile">Profile</a> |
@@ -22,7 +22,9 @@
     <a href="/login">Login/Signup</a>
     {{/if}}
   </nav>
-  <main>
+  </header>
+
+  <main class="container container-fluid mt-5">
   {{{body}}}
   </main>
   {{#if logged_in}}
