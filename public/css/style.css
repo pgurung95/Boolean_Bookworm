@@ -19,6 +19,7 @@ header, .project:not(:last-child) {
   
 
   main {
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
