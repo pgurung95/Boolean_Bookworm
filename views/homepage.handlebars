@@ -1,9 +1,9 @@
-<aside>
+{{!-- <aside>
   <h2>Current Book: {{#if isCurrent}}{{booksData.title}}
     {{else}}
     Not applicable
     {{/if}}</h2>
-</aside>
+</aside> --}}
 {{#if logged_in}}
 <div class="bookclub_blog">
   Blog Post:
@@ -15,8 +15,8 @@
   </ul>
 </div>
 {{else}}
-<div class="bookclub_list">
-  Previous Book Club Reads:
+<div class="bookclubList text-center center col s12">
+  <h2>Previous Book Club Reads:</h2>
   <ul class="book_list">
     {{#each books as |book|}}
     <li>{{book.title}}</li>
