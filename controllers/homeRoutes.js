@@ -51,8 +51,8 @@ router.get('/profile', withAuth, async (req, res) => {
       console.log(user);
   
       res.render('profile', {
-        ...user,
-        ...books,
+        user,
+        books,
         logged_in: true
       });
     } catch (err) {

@@ -39,6 +39,7 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
     console.log("hello", req.body);
+    console.log(req.params.id);
     try {
         const comment = await blog.destroy({
             where: {

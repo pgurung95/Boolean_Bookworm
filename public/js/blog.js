@@ -47,7 +47,9 @@ const deletePost = async (e) => {
 //edit comment
 //add code here // post mvp
 
-  document.querySelector('#delete').addEventListener('click', deletePost);
+  document.querySelectorAll('.delete').forEach((item)=>{
+    item.addEventListener('click', deletePost);
+  })
   document.querySelector('#submit').addEventListener('click', newComment);
 
  
