@@ -2,9 +2,9 @@
   <div class="mt-5">
     <h2 class="prReading_list d-flex">Personal List Reading List:</h2>
       <ul class="prbook_list border d-flex">
-        {{!-- {{#each user}} --}}
-        <li>{{prList.book_name}}</li>
-        {{!-- {{/each}} --}}
+        {{#each books as |book|}} 
+        <li>{{book.book_name}}</li>
+        {{/each}}
       </ul>
     </div>
   </div>
