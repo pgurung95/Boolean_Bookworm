@@ -1,16 +1,15 @@
 const router = require('express').Router();
 const { blog } = require('../../models');
-const withAuth = require('../../utils/auth');
 
 // get for testing
-// router.get('/', async (req, res) => {
-//      try {
-//        const comment = await blog.findAll();
-//        res.status(200).json(comment);
-//      } catch (err) {
-//        res.status(500).json(err);
-//      }
-//    });
+router.get('/', async (req, res) => {
+     try {
+       const comment = await blog.findAll();
+       res.status(200).json(comment);
+     } catch (err) {
+       res.status(500).json(err);
+     }
+   });
 
 // create a new comment
 router.post('/', async (req, res) => {
@@ -39,6 +38,7 @@ router.put('/:id', async (req, res) => {
 //delete a comment
 
 router.delete('/:id', async (req, res) => {
+    console.log("hello", req.body);
     try {
         const comment = await blog.destroy({
             where: {

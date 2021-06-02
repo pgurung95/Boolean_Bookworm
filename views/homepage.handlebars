@@ -1,3 +1,16 @@
+<header>
+  <h1 class="d-flex justify-content-center bg-secondary">Boolean Bookworm Book Club</h1>
+</header>
+<nav class="navbar navbar-dark bg-dark">
+  {{#if logged_in}}
+  <a href="/profile">Profile</a> |
+  <a href="/">Home</a> |
+  <button id="logout" class="btn btn-secondary">Logout</button>
+  {{else}}
+  <a href="/login">Login/Signup</a>
+  {{/if}}
+</nav>
+
 <aside>
   <h2>Current Book: {{#if isCurrent}}{{booksData.title}}
     {{else}}
@@ -5,22 +18,48 @@
     {{/if}}</h2>
 </aside>
 {{#if logged_in}}
-<div class="bookclub_blog">
-  Blog Post:
-  <ul class="comment">
-    {{#each posts as |post|}}
-    <li>{{post.user_name}}</li>
-    <li>{{post.comment}}</li>
-    {{/each}}
-  </ul>
+<div class="bookclub_blog border border-secondary">
+  <h3>Blog Post:</h3>
+  {{#each posts as |post|}}
+  <div class="card">
+    <div class="card-body comment">
+      <h5 class="card-title comment">{{post.user_name}}</h5>
+      <p class="card-text">{{post.comment}}</p>
+      <button class="btn btn-primary" id="delete" data-id="{{post.id}}">Delete</button>
+
+    </div>
+  </div>
+  {{/each}}
+</div>
+<div class="row mt-4">
+  <div class="col-md-6 border border-primary">
+    <h4>New comment:</h4>
+    <form class="new-comment-form">
+      <div class="form-group">
+        <label for="user-name">Username:</label>
+        <input class="form-input" type="text" id="user-name" name="user-name" />
+      </div>
+      <div class="form-group">
+        <label for="comment-desc">Comment:</label>
+        <textarea class="form-input" id="comment-desc" name="comment-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" id="submit">Submit</button>
+      </div>
+    </form>
+  </div>
 </div>
 {{else}}
-<div class="bookclub_list">
-  Previous Book Club Reads:
+<div class="bookclubList text-center center col s12">
+  <h2>Previous Book Club Reads:</h2>
   <ul class="book_list">
     {{#each books as |book|}}
     <li>{{book.title}}</li>
     {{/each}}
   </ul>
 </div>
+{{/if}}
+<script src="./js/blog.js"></script>
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
 {{/if}}

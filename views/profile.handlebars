@@ -1,24 +1,26 @@
+  <header>
+    <h1>{{name}}</h1>
+  </header>
+  <nav>
+    {{#if logged_in}}
+    <a href="/">Home</a> |
+    <button id="logout" class="btn btn-secondary">Logout</button>
+    {{else}}
+    <a href="/login">Login/Signup</a>
+    {{/if}}
+  </nav>
  <div class="row">
 
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
     <div>
-        <div class="club_member">
-            {{!-- need to add code below --}}
-         {{!-- Member of:{{#if }}{{/if}} --}}
-        </div>
-
         <div class="prReading_list">
             Personal List Reading List:
             <ul class="prbook_list">
-                {{#each book}}
-                <li>{{book.title}}</li>
-                {{/each}}
+                {{!-- {{#each user}} --}}
+                <li>{{prList.book_name}}</li>
+                {{!-- {{/each}} --}}
             </ul>
         </div>
     </div>
-    {{/if}}
 </div>
 
 <script src="./js/profile.js"></script>
