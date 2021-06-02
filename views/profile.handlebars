@@ -1,26 +1,13 @@
-  <header>
-    <h1>{{name}}</h1>
-  </header>
-  <nav>
-    {{#if logged_in}}
-    <a href="/">Home</a> |
-    <button id="logout" class="btn btn-secondary">Logout</button>
-    {{else}}
-    <a href="/login">Login/Signup</a>
-    {{/if}}
-  </nav>
- <div class="row">
-
-    <div>
-        <div class="prReading_list">
-            Personal List Reading List:
-            <ul class="prbook_list">
-                {{!-- {{#each user}} --}}
-                <li>{{prList.book_name}}</li>
-                {{!-- {{/each}} --}}
-            </ul>
-        </div>
+<h1 class="d-flex ms-2">{{name}}</h1>
+  <div class="mt-5">
+    <h2 class="prReading_list d-flex">Personal List Reading List:</h2>
+      <ul class="prbook_list border d-flex">
+        {{!-- {{#each user}} --}}
+        <li>{{prList.book_name}}</li>
+        {{!-- {{/each}} --}}
+      </ul>
     </div>
+  </div>
 </div>
 
 <script src="./js/profile.js"></script>
