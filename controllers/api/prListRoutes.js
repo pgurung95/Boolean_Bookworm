@@ -5,24 +5,15 @@
 
 const router = require('express').Router();
 const { personalReadingList} = require('../../models');
-const withAuth = require('../../utils/auth');
 
 // GET all personalReadingList for profile
 router.get('/', async (req, res) => {
     try {
       const dbprListData = await personalReadingList.findAll();
   
-      const personalReadingLists = dbprListData.map((PersonalReadingList) =>
-        PersonalReadingList.get({ plain: true })
-      );
-  
-      res.render('profile', {
-        personalReadingLists,
-        loggedIn: req.session.loggedIn,
-      });
+      res.status(200).json(dbprListData);
     } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
+      res.status(400).json(err);
     }
   });
   

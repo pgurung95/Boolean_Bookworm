@@ -1,6 +1,6 @@
 
 const router = require('express').Router();
-const { Books, personalReadingList, blog } = require('../models');
+const { Books, personalReadingList, blog, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET all previous read books from book club for homepage
@@ -28,21 +28,31 @@ router.get('/', async (req, res) => {
 
 
 // GET profile
+
 router.get('/profile', withAuth, async (req, res) => {
     try {
       // Find the logged in user based on the session ID
       const userData = await User.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
-        include: [{ model: personalReadingList }],
+         include: [{ model: personalReadingList }],
       });
-  
-      const prListBooks = await personalReadingList.findAll();
 
       const user = userData.get({ plain: true });
+  
+      const prListBooks = await personalReadingList.findAll({
+        where: {
+          user_id: req.session.user_id
+        },
+      });
+
       const books = prListBooks.map((book) => book.get({ plain: true }));
+
+      console.log(books);
+      console.log(user);
   
       res.render('profile', {
-        ...user, books,
+        ...user,
+        ...books,
         logged_in: true
       });
     } catch (err) {
