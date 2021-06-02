@@ -79,3 +79,7 @@ li {
     font-size: 20px;
     list-style-type: none;
 }
+
+.row {
+    margin-top: 10px;
+}
