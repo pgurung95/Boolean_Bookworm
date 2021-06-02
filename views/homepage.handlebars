@@ -6,6 +6,26 @@
     Not applicable
     {{/if}}</h2>
     </aside> --}}
+<div class="card">
+  <div class="card-header">
+    Current Book:
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{#if isCurrent}}{{booksData.title}}
+      {{else}}
+      Ready Player Two
+    {{/if}}</h5>
+    <p class="card-text">{{#if isCurrent}}By: {{booksData.author}}
+      {{else}}
+      By: Ernest Cline
+      {{/if}}</p>
+    <p class="card-text">{{#if isCurrent}}{{booksData.description}}
+      {{else}}
+      No description available.
+    {{/if}}</p>
+  </div>
+</div>
+
 <div class="row">
 <div class="bookclub_blog border border-secondary col">
   <h3>Blog Post:</h3>
