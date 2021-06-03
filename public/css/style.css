@@ -104,3 +104,7 @@ li {
 .card-title, .card-text, .blog-header, h4, label {
     color: #2d3e50;
 }
+
+.login-page {
+    margin: auto;
+}
