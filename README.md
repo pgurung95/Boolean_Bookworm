@@ -12,7 +12,7 @@ There is no installation required to use this webpage.
 
 Once a user has joined or logged in they will be able to communicate with other members via blog posts. The posts will allow users to discuss their progress, book reactions, and a date to meet to discuss the whole book. As a logged in member users will be able to post and delete blog comments.  
 
-*add screenshoot* 
+![Screen Shot 2021-06-03 at 7 11 38 PM](https://user-images.githubusercontent.com/78658860/120723703-3fda1380-c4a0-11eb-9d84-b434a08332d7.png)
 
 ## Features
 
