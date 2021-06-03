@@ -4,8 +4,6 @@ const newComment = async (e) => {
 
   const user_name = document.querySelector('#user-name').value.trim();
   const comment = document.querySelector('#comment-desc').value.trim();
-  console.log(user_name);
-  console.log(comment);
 
    if(user_name && comment) {
     const response = await fetch('api/blogs', {
@@ -30,7 +28,6 @@ const newComment = async (e) => {
 const deletePost = async (e) => {
   if (e.target.hasAttribute('data-id')) {
         const id = e.target.getAttribute('data-id')
-  console.log(id)
     const response = await fetch(`/api/blogs/${id}`, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
