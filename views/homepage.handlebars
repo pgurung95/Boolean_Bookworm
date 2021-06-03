@@ -1,7 +1,8 @@
 {{#if logged_in}}
+<aside class="aside">
 <div class="card">
   <div class="card-header">
-    Current Book:
+    <h2>Current Book:</h2>
   </div>
   <div class="card-body">
     <h5 class="card-title">{{currentBook.title}}</h5>
@@ -9,9 +10,11 @@
     <p class="card-text">{{currentBook.description}}</p>
   </div>
 </div>
+</aside>
 <div class="row">
 <div class="bookclub_blog border border-secondary col">
-  <h3>Blog Post:</h3>
+  <h2 class="blog-header">Blog Post:</h2>
+  <p class="blog">Hey everyone! Can't wait to read this month's pick! Let's chat here about the progress of our reading and figure out when to meet up to discuss.</p>
   {{#each posts as |post|}}
   <div class="card">
     <div class="card-body comment">

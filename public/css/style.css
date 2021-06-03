@@ -81,5 +81,19 @@ li {
 }
 
 .row {
-    margin-top: 10px;
+    margin-top: 40px;
+    width: 50%;
+}
+
+.aside {
+    margin: 40px;
+    width: 25%;
+}
+
+.bookclub_blog {
+    color: #fff;
+}
+
+.card-title, .card-text, .blog-header, h4, label {
+    color: #2d3e50;
 }
