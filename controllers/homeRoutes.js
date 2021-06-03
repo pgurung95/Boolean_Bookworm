@@ -2,6 +2,7 @@
 const router = require('express').Router();
 const { Books, personalReadingList, blog, User } = require('../models');
 const withAuth = require('../utils/auth');
+const _ = require('underscore');
 
 // GET all previous read books from book club for homepage
 router.get('/', async (req, res) => {
@@ -13,11 +14,14 @@ router.get('/', async (req, res) => {
                     // isCurrent: false
         const blogData = await blog.findAll();
 
+        
         const posts = blogData.map((post) => post.get({ plain: true }));
         const books = booksData.map((book) => book.get({ plain: true }));
+        const booksInOrder = _.sortBy(books, 'date_read');
+        const currentBook = _.max(booksInOrder, 'date_read');
 
         res.render('homepage', {
-            books, posts,
+            books, posts, currentBook,
             logged_in: req.session.logged_in 
         });
     } catch (err) {

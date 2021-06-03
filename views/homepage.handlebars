@@ -1,31 +1,14 @@
 {{#if logged_in}}
-{{!-- <aside>
->>>>>>> main
-  <h2>Current Book: {{#if isCurrent}}{{booksData.title}}
-    {{else}}
-    Not applicable
-    {{/if}}</h2>
-    </aside> --}}
 <div class="card">
   <div class="card-header">
     Current Book:
   </div>
   <div class="card-body">
-    <h5 class="card-title">{{#if isCurrent}}{{booksData.title}}
-      {{else}}
-      Ready Player Two
-    {{/if}}</h5>
-    <p class="card-text">{{#if isCurrent}}By: {{booksData.author}}
-      {{else}}
-      By: Ernest Cline
-      {{/if}}</p>
-    <p class="card-text">{{#if isCurrent}}{{booksData.description}}
-      {{else}}
-      No description available.
-    {{/if}}</p>
+    <h5 class="card-title">{{currentBook.title}}</h5>
+    <p class="card-text">By: {{currentBook.author}}</p>
+    <p class="card-text">{{currentBook.description}}</p>
   </div>
 </div>
-
 <div class="row">
 <div class="bookclub_blog border border-secondary col">
   <h3>Blog Post:</h3>
