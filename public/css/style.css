@@ -69,7 +69,14 @@ h2 {
     list-style-type: none;
 }
 
+.newBook {
+    width: max-content;
+    justify-content: end;
+}
 
+#user-id {
+    display: none;
+}
 
 nav {
     font-size: 20px;
