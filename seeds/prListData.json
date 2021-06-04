@@ -12,25 +12,25 @@
         "user_id": 1
     },
     {
-        "book_name": "WHILE JUSTICE SLEEPS",
+        "book_name": "While Justice Sleeps",
         "book_author": "Stacey Abrams",
         "book_description": "Justice falls into coma, assistant solves case",
         "user_id": 2
     },
     {
-        "book_name": "SOOLEY",
+        "book_name": "Sooley",
         "book_author": "John Grisham",
         "book_description": "Guy gets scholarship, saves family from war ravaged country",
         "user_id": 2
     },
     {
-        "book_name": "21ST BIRTHDAY",
+        "book_name": "21st Birthday",
         "book_author": "James Patterson and Maxine Paetro",
         "book_description": "Missing Mother, new evidence changes case",
         "user_id": 3
     },
     {
-        "book_name": "THE HILL WE CLIMB",
+        "book_name": "The Hill We Climb",
         "book_author": "Amanda Gorman",
         "book_description": "Inaugural Day Poem",
         "user_id": 3

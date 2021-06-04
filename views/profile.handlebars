@@ -1,9 +1,9 @@
 <div class="row profile">
-  <div class="p-1 border col-md-6">
+  <h2 class="user-name">Welcome, {{user.name}}!</h2>
+  <div class="personal_readingList p-1 border col-md-6">
     <header>
-      <h1 class="d-flex justify-content-center">{{user.name}}</h1>
+      <h2 class="prbook_list_header d-flex justify-content-center">Personal List Reading List:</h2>
     </header>
-    <h2 class="prReading_list">Personal List Reading List:</h2>
     <ul class="prbook_list">
       {{#each books as |book|}}
       <li>{{book.book_name}}</li>
