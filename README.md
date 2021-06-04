@@ -4,6 +4,10 @@
 
 Users will be able to access the Boolean Bookclub homepage and see the previously read books however there are benefits to membership. The homepage gives the users the option of logging in or signing up for the bookclub and once a member the user will now obtain access to exclusive member information; current book being read, member usernames, automatic membership access to 3 other bookclubs, and private blog posts by members. Additionally once a user has joined and/or logged in they now have a personal profile page that lists bookclub membership and a personal reading list.
 
+## User Story
+
+As an avid reader, I am looking to join an online community with individuals interested in reading various book genres. I usually read alone but would like to find a group where I can meet like minded individuals, develop new friendships, discover good books, and get the opportunity to chat and share thoughts on books in a members only open forum.
+
 ## Installation
 
 There is no installation required to use this webpage.
