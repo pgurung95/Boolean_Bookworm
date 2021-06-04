@@ -22,7 +22,7 @@ In addition to requiring signup or login for protected information users are abl
 
 ## Technologies Used
 
-Node.js, Express.js, Handlebars.js, MySQL, Sequelize ORM, HTML, CSS, JS, Materialize CSS, Normalize, Bootstrap, JSON API, Underscore. 
+Node.js, Sequelize ORM, HTML, CSS, JS, Materialize CSS, Normalize, Bootstrap, JSON API, Bcrypt, Connect-Session-Sequelize, Dotenv, Express-Handlebars, Express-Session, MySql, MySql2, Sequelize, Underscore
 
 ## Credits
 
