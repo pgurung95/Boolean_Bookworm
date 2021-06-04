@@ -19,9 +19,10 @@ router.get('/', async (req, res) => {
         const books = booksData.map((book) => book.get({ plain: true }));
         const booksInOrder = _.sortBy(books, 'date_read');
         const currentBook = _.max(booksInOrder, 'date_read');
+        const prevBooks = booksInOrder.pop()
 
         res.render('homepage', {
-            books, posts, currentBook,
+            books, posts, currentBook, booksInOrder,
             logged_in: req.session.logged_in 
         });
     } catch (err) {
@@ -51,8 +52,8 @@ router.get('/profile', withAuth, async (req, res) => {
 
       const books = prListBooks.map((book) => book.get({ plain: true }));
 
-      console.log(books);
-      console.log(user);
+      //console.log(books);
+      //console.log(user);
   
       res.render('profile', {
         user,
