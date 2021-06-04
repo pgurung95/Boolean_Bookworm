@@ -52,18 +52,16 @@ h2 {
 }
 
 .prbook_list {
-    margin: auto;
-    margin-top: 5px;
+    padding: 10%;
+    /* margin: auto;
+    margin-top: 5px; */
     color: #fff;
     width: max-content;
 }
 
-.prReading_list {
-    margin: auto;
-    margin-top: 10px;
-    color: #fff;
+.personal_readingList {
+    padding: 20%;
 }
-
 
 .book_list {
     list-style-type: none;
@@ -114,4 +112,11 @@ li {
     margin: auto;
     margin-top: 5%;
     display: flex;
+}
+
+.user-name {
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 5%;
 }
