@@ -1,19 +1,8 @@
-<h2 div class="row justify-content-sm-center" </h2>
-  <div class="col-sm-auto d-flex">
-    <div class="card" style="width: 30rem; margin-top:15%; margin-left:0%; margin-right:20%">
-      <div class="card-header">
-        Member Of:
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">The Bookaholics</li>
-        <li class="list-group-item">The C Word Book Club</li>
-        <li class="list-group-item">All Booked</li>
-        <li class="list-group-item">Boolean Bookworm Bookclub</li>
-      </ul>
-    </div>
-  </div>
-  <h1 class="ms-2">{{user.name}}</h1>
-  <div class="mt-5 p-1 border">
+<div class="row profile">
+  <div class="p-1 border col-md-6">
+    <header>
+      <h1 class="d-flex justify-content-center">{{user.name}}</h1>
+    </header>
     <h2 class="prReading_list">Personal List Reading List:</h2>
     <ul class="prbook_list">
       {{#each books as |book|}}
@@ -57,17 +46,25 @@
         </div>
       </div>
     </div>
-
     <div class="text-center">
       <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm"> Add
         Book</a>
     </div>
+  </div>
+  <div class="profile-card col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h2>Member Of:</h2>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">The Bookaholics</li>
+        <li class="list-group-item">The C Word Book Club</li>
+        <li class="list-group-item">All Booked</li>
+        <li class="list-group-item">Boolean Bookworm Bookclub</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 
-
-  </div>
-  </div>
-  </div>
-  </div>
-
-  <script src="./js/profile.js"></script>
+<script src="./js/profile.js"></script>

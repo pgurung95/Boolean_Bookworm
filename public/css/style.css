@@ -108,3 +108,10 @@ li {
 .login-page {
     margin: auto;
 }
+
+
+.profile {
+    margin: auto;
+    margin-top: 5%;
+    display: flex;
+}
