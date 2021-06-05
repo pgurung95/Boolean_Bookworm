@@ -8,10 +8,6 @@ const _ = require('underscore');
 router.get('/', async (req, res) => {
     try {
         const booksData = await Books.findAll();
-        // const currentBook = await Books.findOne({
-        //     where
-        // })
-                    // isCurrent: false
         const blogData = await blog.findAll();
 
         
@@ -52,8 +48,6 @@ router.get('/profile', withAuth, async (req, res) => {
 
       const books = prListBooks.map((book) => book.get({ plain: true }));
 
-      //console.log(books);
-      //console.log(user);
   
       res.render('profile', {
         user,
