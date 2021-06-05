@@ -26,7 +26,7 @@ In addition to requiring signup or login for protected information users are abl
 
 ## Technologies Used
 
-Node.js, Sequelize ORM, HTML, CSS, JS, Normalize, Bootstrap, JSON API, Bcrypt, Connect-Session-Sequelize, Dotenv, Express-Handlebars, Express-Session, MySql, MySql2, Sequelize, Underscore
+Node.js, Sequelize ORM, HTML, CSS, JavaScript, Normalize, Bootstrap, JSON API, Bcrypt, Connect-Session-Sequelize, Dotenv, Express-Handlebars, Express-Session, MySql, MySql2, Sequelize, Underscore
 
 ## Credits
 
@@ -36,6 +36,6 @@ Jeff DeRosalia, Dan Rosenbaum
 
 ## Link
 
-*add link*
+https://github.com/pgurung95/Boolean_Bookworm
 
 
